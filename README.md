@@ -1,5 +1,10 @@
+# (INSTRUCCIONES DEL EJERCICIO)
+
 # Desafío Pokémon: ¡Conviértete en Maestro Pokémon!
-# Tu objetivo como entrenador es atrapar Pokémon, revisar tu mochila y desafiar al Gimnasio Eléctrico. Para lograrlo, deberás tomar decisiones, manejar tus recursos y elegir bien a tu compañero de combate.
+
+# Tu objetivo como entrenador es atrapar Pokémon, revisar tu mochila y desafiar al Gimnasio Eléctrico. 
+
+# Para lograrlo, deberás tomar decisiones, manejar tus recursos y elegir bien a tu compañero de combate.
 # Contenidos que se pondrán en práctica:
 # •	Variables y constantes
 # •	if, elif, else
@@ -77,6 +82,7 @@
 # _______________________________
 # Reglas adicionales:
 # •	Usa funciones para organizar tu código: por ejemplo, mostrar_menu(), atrapar_pokemon(), ver_mochila(), desafiar_gimnasio(), etc.
+
 # •	Usa try/except para manejar errores si el usuario elige un número inválido.
 # •	Usa una bandera para indicar si el jugador ya ha ganado en el gimnasio, y evitar que lo desafíe otra vez.
 # ________________________________________
