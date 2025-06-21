@@ -1,84 +1,92 @@
-# (INSTRUCCIONES DEL EJERCICIO)
+# 🧪 INSTRUCCIONES DEL EJERCICIO
 
-Desafío Pokémon: ¡Conviértete en Maestro Pokémon!
+## 🎯 Desafío Pokémon: ¡Conviértete en Maestro Pokémon!
 
-Tu objetivo como entrenador es atrapar Pokémon, revisar tu mochila y desafiar al Gimnasio Eléctrico. 
+Tu objetivo como entrenador es **atrapar Pokémon**, **revisar tu mochila** y **desafiar al Gimnasio Eléctrico**.  
+Para lograrlo, deberás tomar decisiones, administrar tus recursos y elegir sabiamente a tu compañero de combate.
 
-Para lograrlo, deberás tomar decisiones, manejar tus recursos y elegir bien a tu compañero de combate.
+---
 
-Contenidos que se pondrán en práctica:
-• Variables y constantes
-• if, elif, else
-• Bucles while, for
-• try/except
-• Tipos de variables
-• Banderas
-• Listas
-• Funciones -->
+### 📚 Contenidos que pondrás en práctica:
+- Variables y constantes
+- Estructuras de control: `if`, `elif`, `else`
+- Bucles: `while`, `for`
+- Manejo de errores con `try/except`
+- Tipos de variables
+- Uso de banderas (flags)
+- Listas
+- Funciones
 
-## Enunciado:
-Crea un programa con el siguiente menú principal, que se repite hasta que el jugador elija salir:
+---
 
-=== MENÚ PRINCIPAL ===
-1. Atrapar Pokémon
-2. Ver mochila
-3. Desafiar al Gimnasio
-4. Salir del juego
+## 📝 Enunciado
 
-Elige una opción: 
-________________________________________
-1. Atrapar Pokémon
-•	Tienes una lista de Pokémon salvajes (["Pikachu", "Charmander", "Squirtle", "Bulbasaur", "Pidgey"]).
-•	En cada intento, aparece un Pokémon aleatorio (puedes usar random.choice() si está permitido, o simularlo con índices).
-•	Pregunta al usuario si desea atraparlo (s / n).
+Crea un programa con el siguiente **menú principal**, que se repetirá hasta que el jugador elija salir:
 
 
-•	Si elige "s", agrega el Pokémon a su mochila (otra lista).
-•	Solo se pueden atrapar máximo 6 Pokémon.
+---
 
+### 1️⃣ Atrapar Pokémon
+- Tienes una lista de Pokémon salvajes:  
+  `["Pikachu", "Charmander", "Squirtle", "Bulbasaur", "Pidgey"]`
+- En cada intento, aparece un Pokémon aleatorio.
+  - Puedes usar `random.choice()` o simular la aleatoriedad con índices.
+- Pregunta al usuario si desea atraparlo (`s` / `n`).
+- Si elige "s", agrega el Pokémon a su **mochila** (otra lista).
+- Máximo 6 Pokémon pueden estar en la mochila.
+- Si está llena, permite eliminar uno para hacer espacio. *(opcional)*
 
-2. Ver mochila
-•	Muestra los Pokémon que el jugador ha atrapado.
-•	Si no hay Pokémon, muestra un mensaje adecuado.
+---
 
+### 2️⃣ Ver mochila
+- Muestra los Pokémon atrapados por el jugador.
+- Si la mochila está vacía, muestra un mensaje adecuado.
 
+---
 
+### 3️⃣ Desafiar al Gimnasio
+- Si no hay Pokémon atrapados, muestra:
 
-3. Desafiar al Gimnasio
-•	Si el jugador no tiene Pokémon atrapados, mostrar:
+- Si tiene al menos uno:
+- Muestra la lista numerada de Pokémon.
+- Solicita al jugador elegir uno para la batalla.
+- Llama a la función `batallar(pokemon)` que:
+  - Recibe el Pokémon elegido.
+  - Usa condiciones (`if/elif/else`) para definir el resultado:
 
-No tienes Pokémon para combatir. ¡Ve a atraparlos primero!
+    | Pokémon       | Resultado |
+    |---------------|-----------|
+    | Pikachu       | Gana      |
+    | Charmander    | Pierde    |
+    | Bulbasaur     | Empate    |
+    | Otros         | Resultado aleatorio o inventado |
 
-•	Si tiene al menos uno:
-o	Mostrar la lista numerada de Pokémon que tiene.
-o	Pedirle que elija uno para la batalla.
+  - Muestra el resultado de la batalla.
+- Usa una **bandera** para evitar que el gimnasio sea desafiado más de una vez.
 
+---
 
-o	Usar una función batallar(pokemon) que:
-	Recibe el Pokémon elegido.
-	Usa if/elif/else para determinar si gana o pierde, por ejemplo:
+### 4️⃣ Salir del juego
+Despide al jugador con un mensaje personalizado, por ejemplo:  
+**¡Gracias por jugar, Entrenador/a! ¡Vuelve pronto!**
 
-Si elige Pikachu => gana
-Si elige Charmander => pierde
-Si elige Bulbasaur => empate
-(puedes inventar reglas simples)
-Mostrar el resultado de la batalla.
+---
 
+## 🛠️ Reglas adicionales
+- Usa **funciones** para organizar tu código:
+- `mostrar_menu()`
+- `atrapar_pokemon()`
+- `ver_mochila()`
+- `desafiar_gimnasio()`
+- Usa `try/except` para manejar errores al ingresar opciones inválidas.
+- Controla la lógica del juego con una **bandera de victoria**.
 
+---
 
+## ⭐ Extra (Opcional)
+- Llevar la cuenta de cuántos intentos fallidos tuvo el jugador (Pokémon rechazados).
+- Permitir **eliminar Pokémon** de la mochila si está llena.
 
-4. Salir del juego
-Despide al jugador con un mensaje personalizado, por ejemplo:
-¡Gracias por jugar, Entrenador/a! ¡Vuelve pronto!
+---
 
-
-### Reglas adicionales:
-Usa funciones para organizar tu código: por ejemplo, mostrar_menu(), atrapar_pokemon(), ver_mochila(), desafiar_gimnasio(), etc.
-
-Usa try/except para manejar errores si el usuario elige un número inválido.
-
-Usa una bandera para indicar si el jugador ya ha ganado en el gimnasio, y evitar que lo desafíe otra vez.
-________________________________________
-#### Extra (Opcional):
-Contar cuántos intentos fallidos tuvo (cuántos Pokémon dijo que no quería).
-Permitir eliminar un Pokémon de la mochila si está llena. -->
+¡Buena suerte, Entrenador! 🧢⚡
