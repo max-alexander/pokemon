@@ -1,1 +1,0 @@
-bandera_challenged = False
